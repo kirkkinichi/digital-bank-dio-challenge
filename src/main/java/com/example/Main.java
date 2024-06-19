@@ -14,6 +14,7 @@ public class Main {
 
         Bank itau = new Bank();
         itau.setName("Itau");
+        
         itau.addClient(kirk);
         itau.addClient(fulano);
         itau.addClient(ciclano);
@@ -22,10 +23,13 @@ public class Main {
         System.out.println("Clients: ");
         itau.listAllClients();
 
-        Account ca = new CheckingAccount(kirk);
-        Account sa = new SavingsAccount(kirk);
+        Account caKirk = new CheckingAccount(kirk);
+        Account saKirk = new SavingsAccount(kirk);
+        
+        caKirk.setStatus(true);
+        saKirk.setStatus(true);
 
-        ca.printAccountInfo();
-        sa.printAccountInfo();
+        caKirk.printAccountInfo();
+        saKirk.printAccountInfo();
     }
 }

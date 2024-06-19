@@ -8,5 +8,7 @@ public interface AccountInterface {
 
     void transfer(double value, Account aimedAccount);
 
+    void changeStatus(boolean status);
+
     void printAccountInfo();
 }
